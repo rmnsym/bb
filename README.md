@@ -10,7 +10,7 @@
 ```sh
 bb [OPTIONS] <FILE>
 OPTIONS
-    
+    -s, --sort            OPSの高い順に並べ替える
     -h, --help            このメッセージを出力する
 ARGUMENTS
     FILE                  打者の基本成績がまとめられたcsvファイル
