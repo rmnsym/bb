@@ -1,5 +1,5 @@
 # bb
-csvファイルの列を操作するためのcatコマンド機能拡張
+野球の打者指標を算出する
 ![baseball_logo](sport_baseball_bat.png)
 
 ## Description
@@ -8,14 +8,10 @@ csvファイルの列を操作するためのcatコマンド機能拡張
 ## Usage
 
 ```sh
-bb [OPTIONS]... <FILE>...
+bb [OPTIONS] <FILE>
 OPTIONS
-    -c, --column          列名を指定する
-    -n, --column-number   列番号を指定する
-    -t, --tab             入力ファイルがタブ区切りのcsvファイルの場合に指定する
-    -h, --help            このメッセージを表示する
-
-ARGUMENTS
-    FILE                  対象となるcsvファイルのパス
     
+    -h, --help            このメッセージを出力する
+ARGUMENTS
+    FILE                  打者の基本成績がまとめられたcsvファイル
 ```
