@@ -3,7 +3,7 @@
 ![baseball_logo](sport_baseball_bat.png)
 
 ## Description
-
+このソフトウェアでは野球の打者の打席数や安打数などの基本成績から打率やOPSなどの指標を算出する．
 
 ## Usage
 
