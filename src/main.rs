@@ -1,4 +1,5 @@
-use clap::Parser;
+use clap::{ArgEnum, Parser};
+use std::path::PathBuf;
 
 #[derive(Parser)]
 #[clap(
@@ -8,29 +9,45 @@ use clap::Parser;
     about = "野球の打者指標を算出する"
 )]
 struct Options {
-    /// Name of the person to greet
-    #[clap(short, long)]
-    name: String,
+    #[clap(short, long, value_name = "STATS", arg_enum, required = false, help = "昇順に並べ替える")]
+    order:Stats,
 
-    /// Number of times to greet
-    #[clap(short, long, default_value_t = 1)]
-    count: u8,
-    
-    #[clap(long, value_name = "JSON", help = "Specify the additional definitions of the build tools.")]
-    append_defs: Option<PathBuf>,
+    #[clap(short, long, help = "降順に並べ替える")]
+    descending:bool,
 
-    #[clap(short, long, value_name = "JSON", help = "Specify the definition of the build tools.")]
-    definition: Option<PathBuf>,
+    #[clap(value_name = "FILE", required = true, help = "打者の基本成績がまとめられたcsvファイル")]
+    file:PathBuf,
+}
 
-    #[clap(short, long, default_value = "default", value_name = "FORMAT", arg_enum, help = "Specify the output format")]
-    format: Format,
-
-    #[clap(short = '@', value_name = "INPUT", help = "Specify the file contains project path list. If INPUT is dash ('-'), read from STDIN.")]
-    project_list: Option<String>,
-
-    #[clap(value_name = "PROJECTs", required = false, help = "The target project directories for btmeister.")]
-    dirs: Vec<PathBuf>,
+#[derive(Copy, Clone, PartialEq, Eq, PartialOrd, Ord, ArgEnum)]
+enum Stats {
+    K,
+    BB,
+    AVG,
+    SLG,
+    OBP,
+    OPS,
 }
 
 fn main() {
+    Options::parse();
+}
+
+fn hello(name: Option<String>) -> String {
+    return format!("Hello, {}", if let Some(n) = name {
+        n
+    } else {
+        "World".to_string()
+    })
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_basic() {
+        assert_eq!("Hello, World", hello(None));
+        assert_eq!("Hello, Suyama", hello(Some("Suyama".to_string())));
+    }
 }
