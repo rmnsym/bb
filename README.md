@@ -2,6 +2,7 @@
 
 [![build](https://github.com/rmnsym/bb/actions/workflows/build.yaml/badge.svg)](https://github.com/rmnsym/bb/actions/workflows/build.yaml)
 [![Coverage Status](https://coveralls.io/repos/github/rmnsym/bb/badge.svg?branch=main)](https://coveralls.io/github/rmnsym/bb?branch=main)
+[![Rust Report Card](https://rust-reportcard.xuri.me/badge/github.com/rmnsym/bb)](https://rust-reportcard.xuri.me/report/github.com/rmnsym/bb)
 
 野球の打者指標を算出する
 ![baseball_logo](sport_baseball_bat.png)
