@@ -1,7 +1,7 @@
 # bb
 
 [![build](https://github.com/rmnsym/bb/actions/workflows/build.yaml/badge.svg)](https://github.com/rmnsym/bb/actions/workflows/build.yaml)
-[![Coverage Status](https://coveralls.io/repos/github/rmnsym/bb/badge.svg?branch=coverage)](https://coveralls.io/github/rmnsym/bb?branch=coverage)
+[![Coverage Status](https://coveralls.io/repos/github/rmnsym/bb/badge.svg?branch=main)](https://coveralls.io/github/rmnsym/bb?branch=main)
 
 野球の打者指標を算出する
 ![baseball_logo](sport_baseball_bat.png)
