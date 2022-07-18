@@ -7,3 +7,13 @@ edition = "2021"
 
 [dependencies]
 clap = { version = "3.1.12", features = ["derive"] }
+
+[build_dependencies]
+    clap = { version = "3.1.9", features = ["derive"] }
+    clap_complete = "3.1.4"
+
+[package.metadata.scripts]
+    hello = "echo \"Hello World\""
+    coverage = "cargo llvm-cov --html; mkdir -p site/static/coverage; cp -r target/llvm-cov/html/* site/static/coverage/"
+    server = "hugo -s site server"
+    site = "hugo -s site"
