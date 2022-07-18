@@ -18,9 +18,7 @@ ARGUMENTS
     <FILE>    打者の基本成績がまとめられたcsvファイル
 
 OPTIONS
-    -d, --descending-order    降順に並べ替える
     -h, --help                Print help information
-    -s, --sort <STATS>        昇順に並べ替える [possible values: kpct, bbpct, avg, slg, obp, ops]
     -V, --version             Print version information
 ```
 
@@ -31,14 +29,4 @@ No.,Player,K%,BB%,AVG,SLG,OBP,OPS
 1,京産次郎,17.6,10.1,.243,.408,.336,.744
 2,神山太郎,17.5,8.3,.217,.425,.292,.716
 3,産大三郎,20.2,16.0,.283,.485,.395,.880
-$ bb -s　"ops" hitting.csv
-No.,Player,K%,BB%,AVG,SLG,OBP,OPS
-1,神山太郎,17.5,8.3,.217,.425,.292,.716
-2,京産次郎,17.6,10.1,.243,.408,.336,.744
-3,産大三郎,20.2,16.0,.283,.485,.395,.880
-$ bb -s　"ops" -d hitting.csv
-No.,Player,K%,BB%,AVG,SLG,OBP,OPS
-1,産大三郎,20.2,16.0,.283,.485,.395,.880
-2,京産次郎,17.6,10.1,.243,.408,.336,.744
-3,神山太郎,17.5,8.3,.217,.425,.292,.716
 ```
